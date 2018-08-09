@@ -1,4 +1,5 @@
-# PwaCoderconf4
+# pwa-coderconf4
+a simple pwa app for my presentation at coder conf 4 - 2018
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.2.
 
