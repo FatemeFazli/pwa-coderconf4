@@ -3,12 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import { AppMaterialModules } from './material.module';
+
+
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppMaterialModules
   ],
   providers: [],
   bootstrap: [AppComponent]
