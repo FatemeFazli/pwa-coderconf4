@@ -7,18 +7,23 @@ import { AppMaterialModules } from './material.module';
 
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { SearchRepositoryService } from './github-repositories/search-repository.service';
+import { SearchRepositoryComponent } from './github-repositories/search-repository.component';
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent ,
+    SearchRepositoryComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppMaterialModules,
     environment.production ? ServiceWorkerModule.register('ngsw-worker.js') : []
   ],
-  providers: [],
+  providers: [SearchRepositoryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
