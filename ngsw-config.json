@@ -21,6 +21,9 @@
     "resources": {
       "files": [
         "/assets/**"
+      ],
+      "urls": [
+        "https://api.github.com/**"
       ]
     }
   }]

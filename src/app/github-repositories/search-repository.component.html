@@ -1,7 +1,7 @@
 <mat-card>
   <form class="example-form">
     <mat-form-field class="example-full-width">
-      <input matInput placeholder="Enter github organization name"  [ngModelOptions]="{standalone: true}" [(ngModel)]="orgName">
+      <input matInput placeholder="Enter Github organization name"  [ngModelOptions]="{standalone: true}" [(ngModel)]="orgName">
     </mat-form-field>
     <button class="list-btn" mat-raised-button color="primary" (click)="listRepositories(orgName)">List Repositories</button>
   </form>
