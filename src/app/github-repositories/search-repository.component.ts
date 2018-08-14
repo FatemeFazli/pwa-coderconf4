@@ -17,14 +17,11 @@ export class SearchRepositoryComponent implements OnInit{
   ngOnInit() {}
 
   listRepositories(organizationName: string) {
-    console.log('org name' , organizationName)
     this.searchRepositoryService.listOrganizationRepositories(organizationName).subscribe(data => {
       this.repositories = [];
-      console.log(data);
       for(let item in data){
         this.repositories.push(data[item]);
       }
-      console.log(this.repositories);
     },error => {
       this.openSnackBar('Found no organization with this name', 'Try another')
     });

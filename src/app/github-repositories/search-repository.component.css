@@ -1,4 +1,7 @@
 
+.example-full-width{
+  min-width: 15em;
+}
 .example-card {
   margin: .7em auto .7em auto;
   background-color: #f5f5f5 !important;
