@@ -1,6 +1,6 @@
 
 .example-card {
-  margin: .6em auto .6em auto;
+  margin: .7em auto .7em auto;
   background-color: #f5f5f5 !important;
 }
 .title{
@@ -15,8 +15,11 @@
 }
 .value{
   margin:.5em;
+  font-size: .9em;
 }
-
+.mat-card>.mat-card-actions:last-child{
+  margin-bottom: -3px !important;
+}
 .fa.fa-circle.JavaScript{
   color:#f1e05a;
 }
