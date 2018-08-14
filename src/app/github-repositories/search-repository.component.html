@@ -1,4 +1,22 @@
-<div>Search Repo Page</div>
-<div *ngFor="let repository of repositories">
-  {{repository?.name}}
-</div>
+<mat-card>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Organization name"  [ngModelOptions]="{standalone: true}" [(ngModel)]="orgName">
+    </mat-form-field>
+    <button class="list-btn" mat-raised-button color="primary" (click)="listRepositories(orgName)">List Repositories</button>
+  </form>
+</mat-card>
+
+<mat-card  *ngFor="let repository of repositories" class="example-card">
+  <mat-card-header>
+    <mat-card-title class="title">{{repository?.name}}</mat-card-title>
+    <mat-card-subtitle>{{repository?.description}}</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-actions>
+    <span class="value"><i class="fa fa-circle {{repository?.language}} icon"></i>{{repository?.language}}</span>
+    <span class="value"><i class="fa fa-star icon"></i>{{repository?.stargazers_count}}</span>
+    <span class="value"><i class="fa fa-code-fork icon"></i>{{repository?.forks}}</span>
+  </mat-card-actions>
+</mat-card>
+

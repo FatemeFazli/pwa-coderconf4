@@ -1,0 +1,46 @@
+
+.example-card {
+  margin: .6em auto .6em auto;
+  background-color: #f5f5f5 !important;
+}
+.title{
+  color: #673ab7;
+  font-weight: 500
+}
+.list-btn{
+  margin:1em;
+}
+.icon{
+  padding: 3px;
+}
+.value{
+  margin:.5em;
+}
+
+.fa.fa-circle.JavaScript{
+  color:#f1e05a;
+}
+.fa.fa-circle.TypeScript{
+  color:#2b7489;
+}
+.fa.fa-circle.HTML{
+  color: #e34c26;
+}
+.fa.fa-circle.Dart{
+  color: #00B4AB;
+}
+.fa.fa-circle.CSS{
+  color: #563d7c;
+}
+.fa.fa-circle.Ruby{
+  color: #878687;
+}
+.fa.fa-star , .fa.fa-code-fork{
+  color: #888783;
+}
+.fa.fa-circle{
+  color: #843179;
+}
+
+
+
