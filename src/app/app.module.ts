@@ -27,7 +27,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
     HttpClientModule,
     AppMaterialModules,
-    environment.production ? ServiceWorkerModule.register('ngsw-worker.js') : []
+    ServiceWorkerModule.register('/ngsw-worker.js', {
+      enabled: environment.production
+    })
   ],
   providers: [SearchRepositoryService],
   bootstrap: [AppComponent]

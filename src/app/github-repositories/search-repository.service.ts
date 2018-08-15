@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 export class SearchRepositoryService {
   constructor(private http: HttpClient) { }
 
-  listOrganizationRepositories(orgName: string){
+  listOrganizationRepositories(orgName: string) {
     return this.http.get(`https://api.github.com/orgs/${orgName}/repos` );
   }
 }

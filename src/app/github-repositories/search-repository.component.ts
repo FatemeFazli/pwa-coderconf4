@@ -11,10 +11,18 @@ export class SearchRepositoryComponent implements OnInit{
 
   public repositories: any[] = [];
   public orgName = '';
+  public  buttonText = 'List Repositories';
+  public  disabled = false;
+
   constructor(private  searchRepositoryService: SearchRepositoryService,
               public snackBar: MatSnackBar) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    if (!navigator.onLine) {
+      this.buttonText = 'Sorry, you\'re offline';
+      this.disabled = true;
+    }
+  }
 
   listRepositories(organizationName: string) {
     this.searchRepositoryService.listOrganizationRepositories(organizationName).subscribe(data => {
@@ -33,3 +41,4 @@ export class SearchRepositoryComponent implements OnInit{
    });
   }
 }
+
